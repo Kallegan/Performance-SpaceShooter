@@ -271,7 +271,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 39
@@ -301,6 +301,11 @@ Transform:
   m_Father: {fileID: 3363977891885651481}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 8, y: 0, z: 0}
+--- !u!1 &738332522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6160381325117224494, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+  m_PrefabInstance: {fileID: 8924860308359776655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1269596035
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +368,7 @@ GameObject:
   - component: {fileID: 2034776590}
   - component: {fileID: 2034776591}
   - component: {fileID: 2034776592}
+  - component: {fileID: 2034776593}
   m_Layer: 3
   m_Name: BackgroundCamera
   m_TagString: Untagged
@@ -453,11 +459,60 @@ Skybox:
   m_GameObject: {fileID: 2034776587}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: b13109bc4674dd24ebc04b7c12437ad6, type: 2}
+--- !u!114 &2034776593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034776587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4d45bf46f0e8a4482c00eea43aa064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 467793970}
 --- !u!4 &3363977891885651481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6157609519642320790, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
   m_PrefabInstance: {fileID: 8924860308359776655}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &3363977891885651482
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738332522}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 2
+  m_AngularDrag: 3
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3363977891885651483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738332522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c196fe0eab2b3f4782697fe89fd6131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _thrustForce: 7500
+  _pitchForce: 6000
+  _rollForce: 1000
+  _yawForce: 2000
+  _thrustAmount: 0
+  _pitchAmount: 0
+  _rollAmount: 0
+  _yawAmount: 0
 --- !u!1001 &8924860308359776655
 PrefabInstance:
   m_ObjectHideFlags: 0
