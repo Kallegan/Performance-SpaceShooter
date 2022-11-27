@@ -4,7 +4,9 @@ using UnityEngine;
 [Serializable]
 public class MKBMovementControls : MovementControlsBase
 {
-    [SerializeField] float _deadZoneRadius = 0.3f;
+    [SerializeField] float _deadZoneRadius = 0.1f;
+    float _rollAmount = 0;
+
     Vector2 ScreenCenter => new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
     
     public override float YawAmount
@@ -29,13 +31,17 @@ public class MKBMovementControls : MovementControlsBase
     {
         get
         {
-            if(Input.GetKey(KeyCode.Q))           
-                return 1f;            
+            float roll;
 
-            return Input.GetKey(KeyCode.E) ? -1f : 0f;
+            if (Input.GetKey(KeyCode.Q))
+                roll = 1f;
+
+            else
+                roll = Input.GetKey(KeyCode.E) ? -1f : 0f;
+
+
+            return _rollAmount = Mathf.Lerp(_rollAmount, roll, Time.deltaTime * 3f);  
         }
     }
-    public override float ThrustAmount => Input.GetAxis("Vertical");       
-
-   
+    public override float ThrustAmount => Input.GetAxis("Vertical");          
 }
