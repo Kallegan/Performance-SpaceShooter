@@ -15,6 +15,8 @@ public class ShipController : MonoBehaviour
           _yawForce = 2000f;
 
     [SerializeField] List<ShipEngine> _engines;
+    [SerializeField] AnimateCockpitControls _CockpitControls;
+
 
     Rigidbody _rigidBody;
     float _pitchAmount, _rollAmount, _yawAmount = 0f;
@@ -29,7 +31,9 @@ public class ShipController : MonoBehaviour
     private void Start()
     {
         foreach (ShipEngine engine in _engines)
-            engine.Init(ControlInput, _rigidBody, _thrustForce / _engines.Count); 
+            engine.Init(ControlInput, _rigidBody, _thrustForce / _engines.Count);
+
+        _CockpitControls.Init(ControlInput);
     } 
 
     private void Update()
