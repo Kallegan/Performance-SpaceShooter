@@ -45,6 +45,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputType: 0
+--- !u!1 &579732374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 579732375}
+  m_Layer: 0
+  m_Name: BlasterMuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &579732375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579732374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0355, z: 2.091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9097233025712654272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &779367475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779367476}
+  m_Layer: 0
+  m_Name: BlasterMuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779367476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779367475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.028, z: 2.091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9159984838936529906}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441995270
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,6 +6362,7 @@ MonoBehaviour:
   _engines:
   - {fileID: 1977026447}
   - {fileID: 1416447116}
+  _CockpitControls: {fileID: 559821687}
 --- !u!1 &6449182881612204798
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,7 +9554,6 @@ MonoBehaviour:
   - {fileID: 8498396801745960564}
   - {fileID: 8498449733225246316}
   _throttleRanges: 35
-  _movementInput: {fileID: 532613541}
 --- !u!1 &8495168589385643182
 GameObject:
   m_ObjectHideFlags: 0
@@ -13001,6 +13063,7 @@ GameObject:
   - component: {fileID: 9097233025712654272}
   - component: {fileID: 9104448229980018046}
   - component: {fileID: 9113751438076475276}
+  - component: {fileID: 2200406158456376667}
   m_Layer: 0
   m_Name: Blaster
   m_TagString: Untagged
@@ -13021,6 +13084,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9088760217213228308}
+  - {fileID: 579732375}
   m_Father: {fileID: 6157609519642320790}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13074,6 +13138,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2200406158456376667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090760450639333132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508235375e8f1714089eb3ad6ed76408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePrefab: {fileID: 0}
 --- !u!1 &9091341448305826998
 GameObject:
   m_ObjectHideFlags: 0
@@ -13422,6 +13499,7 @@ GameObject:
   - component: {fileID: 9159984838936529906}
   - component: {fileID: 9185214569481247052}
   - component: {fileID: 9177100414418975678}
+  - component: {fileID: 2335647907693161682}
   m_Layer: 0
   m_Name: Blaster
   m_TagString: Untagged
@@ -13442,6 +13520,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9151547343122389286}
+  - {fileID: 779367476}
   m_Father: {fileID: 6157609519642320790}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13495,6 +13574,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2335647907693161682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9154075205764614974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508235375e8f1714089eb3ad6ed76408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePrefab: {fileID: 0}
 --- !u!1 &9154409544362285542
 GameObject:
   m_ObjectHideFlags: 0

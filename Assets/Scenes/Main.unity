@@ -306,6 +306,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6157609519642320790, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
   m_PrefabInstance: {fileID: 1752201564}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &579732375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 579732375, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+  m_PrefabInstance: {fileID: 1752201564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &779367476 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 779367476, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+  m_PrefabInstance: {fileID: 1752201564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &800304259
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,10 +629,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3363977891885651483, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
-      propertyPath: _CockpitControls
+    - target: {fileID: 579732375, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.231
+      objectReference: {fileID: 0}
+    - target: {fileID: 779367476, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.231
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200406158456376667, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _blasterMuzzle
       value: 
-      objectReference: {fileID: 1759280034}
+      objectReference: {fileID: 579732375}
+    - target: {fileID: 2200406158456376667, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: -2134176527471401417, guid: a80e4f44468ba1c4699a364d20adda9e, type: 3}
+    - target: {fileID: 2335647907693161682, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _blasterMuzzle
+      value: 
+      objectReference: {fileID: 779367476}
+    - target: {fileID: 2335647907693161682, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: -2134176527471401417, guid: a80e4f44468ba1c4699a364d20adda9e, type: 3}
     - target: {fileID: 6157609519642320790, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -671,23 +701,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 6160381325117224494, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
---- !u!114 &1759280034 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 559821687, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
-  m_PrefabInstance: {fileID: 1752201564}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 986df85fe19b0e34080ab0fb7cb5a89e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1988142290
 GameObject:
   m_ObjectHideFlags: 0
