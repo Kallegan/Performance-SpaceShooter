@@ -48,4 +48,4 @@ MonoBehaviour:
   _radius: 500
   _maxScale: 5
   _asteroidPrefabs:
-  - {fileID: 0}
+  - {fileID: 2941236917670911672, guid: 947603728f4e1094fa4577faa02d2e58, type: 3}
