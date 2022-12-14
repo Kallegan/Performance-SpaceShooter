@@ -691,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: -2134176527471401417, guid: a80e4f44468ba1c4699a364d20adda9e, type: 3}
     - target: {fileID: 2200406158456376667, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: _blasterCooldownTime
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2335647907693161682, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: _blasterMuzzle
@@ -703,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: -2134176527471401417, guid: a80e4f44468ba1c4699a364d20adda9e, type: 3}
     - target: {fileID: 2335647907693161682, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: _blasterCooldownTime
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6157609519642320790, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: m_RootOrder
