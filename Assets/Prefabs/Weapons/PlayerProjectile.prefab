@@ -357,4 +357,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _launchForce: 5000
   _damage: 100
-  _range: 446
+  _range: 5

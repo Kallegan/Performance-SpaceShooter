@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] [Range(1000, 25000f)] float _launchForce = 1000;
     [SerializeField] [Range(10f, 1000f)] int _damage = 100;
-    [SerializeField] [Range(2f, 10f)] float _range = 2f;
+    [SerializeField] [Range(2f, 10f)] float _range = 5f;
 
     Rigidbody _rigidbody;
     float _duration;
@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
         if (OutOfFuel)
             Destroy(gameObject);
     }
-
+    
     void OnCollisionEnter(Collision collision)
     {
         IDamageable damageable = collision.collider.gameObject.GetComponent<IDamageable>();

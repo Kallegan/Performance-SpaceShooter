@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class FracturedAsteroid : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] [Range(1f, 20f)] float _lifetimeDuration = 10f;
+
+    private float _cleaupTime;
+
+    bool ShouldCleanup
     {
-        
+        get
+        {
+            _cleaupTime -= Time.deltaTime;
+            return _cleaupTime <= 0f;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _cleaupTime = _lifetimeDuration;
+    }
+
+    private void Update()
+    {
+        if(ShouldCleanup)
+             AstroidCleanup();
+    }
+
+    void AstroidCleanup()
+    {
+        Destroy(gameObject);
     }
 }
