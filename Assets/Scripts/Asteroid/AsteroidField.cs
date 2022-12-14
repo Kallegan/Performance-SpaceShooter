@@ -6,7 +6,7 @@ public class AsteroidField : MonoBehaviour
 {
     [SerializeField] [Range(100, 10000)] private int _asteroidCount;
     [SerializeField] [Range(100f, 500f)] private float _radius = 300f;
-    [SerializeField] [Range(0.5f, 50f)] private float _maxScale = 10;
+    [SerializeField] [Range(0.1f, 1f)] private float _maxScale = 0.5f;
     [SerializeField] List<GameObject> _asteroidPrefabs;
 
     private Transform _transform;
