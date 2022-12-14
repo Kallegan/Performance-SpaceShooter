@@ -23,7 +23,7 @@ public class Asteroid : MonoBehaviour, IDamageable
 
         if(_explosionPrefab != null)
         {
-            Instantiate(_explosionPrefab, hitLocation, Quaternion.identity);
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);
