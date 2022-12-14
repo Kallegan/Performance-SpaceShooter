@@ -35,14 +35,14 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        SetActiveCamera(CameraKeyPressed);
+        SetActiveCamera(CameraKeyPressed); 
     }
 
     private void SetActiveCamera(VirtualCameras activeCamera)
     {
         if (activeCamera == VirtualCameras.NoCamera)
         {
-            Debug.Log("Missing Camera");
+            //Debug.Log("Missing Camera");
             return;
         }
 

@@ -6,6 +6,7 @@ public class Blaster : MonoBehaviour
     [SerializeField] Transform _blasterMuzzle;
 
     [SerializeField] [Range(0f, 5f)] float _blasterCooldownTime = 0.25f;
+
     float _cooldown;
 
 

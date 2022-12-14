@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Asteroid : MonoBehaviour, IDamageable
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private FracturedAsteroid _francturedAsteroidPrefab;
+    [SerializeField] private Detonator _explosionPrefab;
+
+    private Transform _transform;
+
+    public void TakeDamage(int damage, Vector3 hitLocation)
     {
-        
+        FractureAsteroid(hitLocation);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FractureAsteroid(Vector3 hitLocation)
     {
-        
+        if(_francturedAsteroidPrefab != null)
+        {
+            Instantiate(_francturedAsteroidPrefab, transform.position, transform.rotation);
+        }    
+
+        if(_explosionPrefab != null)
+        {
+            Instantiate(_explosionPrefab, hitLocation, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 }
+
+
+

@@ -3,9 +3,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    [SerializeField] [Range(5000f, 25000f)] float _launchForce = 5000f;
+    [SerializeField] [Range(1000, 25000f)] float _launchForce = 1000;
     [SerializeField] [Range(10f, 1000f)] int _damage = 100;
-    [SerializeField] [Range(10f, 1000f)] float _range = 5f;
+    [SerializeField] [Range(2f, 10f)] float _range = 2f;
 
     Rigidbody _rigidbody;
     float _duration;
@@ -38,8 +38,14 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"projectile collided with {collision.collider.name}");
+        IDamageable damageable = collision.collider.gameObject.GetComponent<IDamageable>();
+
+        if(damageable != null)
+        {
+            Vector3 hitPosition = collision.GetContact(0).point;
+            damageable.TakeDamage(_damage, hitPosition);
+        }
     }
 }
