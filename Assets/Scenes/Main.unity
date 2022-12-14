@@ -1039,6 +1039,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 687614062991701076, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
+      propertyPath: _radius
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 687614062991701076, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
+      propertyPath: _maxScale
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 687614062991701076, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
+      propertyPath: _asteroidCount
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 687614062991701076, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
       propertyPath: _asteroidPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 2941236917670911672, guid: 947603728f4e1094fa4577faa02d2e58, type: 3}
@@ -1068,15 +1080,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 687614062991701079, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 687614062991701079, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 687614062991701079, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 687614062991701079, guid: 12a60f94b1a697a4faccda0e8d66c1fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
