@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipController : MonoBehaviour
 {
     
-    [SerializeField] ShipMovementInput _movementInput;
+    [SerializeField] ShipInpitControls _movementInput;
 
     [SerializeField]
     [Range(1000f, 10000f)]
