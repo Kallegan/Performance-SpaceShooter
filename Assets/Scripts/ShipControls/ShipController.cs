@@ -7,12 +7,7 @@ public class ShipController : MonoBehaviour
     
     [SerializeField] ShipInpitControls _movementInput;
 
-    [SerializeField]
-    [Range(1000f, 10000f)]
-    float _thrustForce = 7500f,
-          _pitchForce = 6000f,
-          _rollForce = 1000f,
-          _yawForce = 2000f;
+    [SerializeField] ShipDataSO _shipData;    
 
     [SerializeField] List<ShipEngine> _engines;
     [SerializeField] AnimateCockpitControls _CockpitControls;
@@ -34,7 +29,8 @@ public class ShipController : MonoBehaviour
     private void Start()
     {
         foreach (ShipEngine engine in _engines)
-            engine.Init(MovementInput, _rigidBody, _thrustForce / _engines.Count);
+            
+            engine.Init(MovementInput, _rigidBody, _shipData.ThrustForce / _engines.Count);
 
         foreach (Blaster blaster in _blasters)
             blaster.Init(WeaponInput);
@@ -52,13 +48,13 @@ public class ShipController : MonoBehaviour
     private void FixedUpdate()
     {
         if(!Mathf.Approximately(0f, _pitchAmount))        
-            _rigidBody.AddTorque(transform.right * (_pitchForce * _pitchAmount * Time.fixedDeltaTime));
+            _rigidBody.AddTorque(transform.right * (_shipData.PitchForce * _pitchAmount * Time.fixedDeltaTime));
 
         if (!Mathf.Approximately(0f, _rollAmount))
-            _rigidBody.AddTorque(transform.forward * (_rollForce * _rollAmount * Time.fixedDeltaTime));
+            _rigidBody.AddTorque(transform.forward * (_shipData.RollForce * _rollAmount * Time.fixedDeltaTime));
 
         if (!Mathf.Approximately(0f, _yawAmount))
-            _rigidBody.AddTorque(transform.up * (_yawForce * _yawAmount * Time.fixedDeltaTime));
+            _rigidBody.AddTorque(transform.up * (_shipData.YawForce * _yawAmount * Time.fixedDeltaTime));
 
     }
 }

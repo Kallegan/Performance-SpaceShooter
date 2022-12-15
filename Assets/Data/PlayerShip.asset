@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199a555c3035fe74d90998a39930ccd9, type: 3}
+  m_Name: PlayerShip
+  m_EditorClassIdentifier: 
+  _thrustForce: 7500
+  _pitchForce: 6000
+  _rollForce: 1000
+  _yawForce: 2000
+  _shieldStrength: 5000
+  _shieldRefreshRate: 100
+  _maxHealth: 1000
+  _blasterDamage: 100
+  _blasterProjectileLifetime: 2
