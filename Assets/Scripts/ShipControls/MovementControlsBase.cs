@@ -5,4 +5,3 @@ public abstract class MovementControlsBase : IMovementControls
   public abstract float RollAmount { get; }
   public abstract float ThrustAmount { get; }
 }
-
