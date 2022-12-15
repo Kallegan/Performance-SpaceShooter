@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] [Range(1000, 25000f)] float _launchForce = 1000;
     [SerializeField] [Range(10f, 1000f)] int _damage = 100;
     [SerializeField] [Range(2f, 10f)] float _range = 5f;
+    [SerializeField] private Detonator _hitEffect;
 
     Rigidbody _rigidbody;
     float _duration;
@@ -47,5 +48,12 @@ public class Projectile : MonoBehaviour
             Vector3 hitPosition = collision.GetContact(0).point;
             damageable.TakeDamage(_damage, hitPosition);
         }
+
+        if(_hitEffect != null)
+        {
+            Instantiate(_hitEffect, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 }
