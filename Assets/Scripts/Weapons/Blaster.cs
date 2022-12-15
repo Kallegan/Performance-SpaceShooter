@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Blaster : MonoBehaviour
@@ -6,6 +7,8 @@ public class Blaster : MonoBehaviour
     [SerializeField] Transform _blasterMuzzle;
 
     [SerializeField] [Range(0f, 5f)] float _blasterCooldownTime = 0.25f;
+
+    private IWeaponControls _weaponInput;
 
     float _cooldown;
 
@@ -26,7 +29,9 @@ public class Blaster : MonoBehaviour
 
     void Update()
     {
-        if(WeaponReady && Input.GetMouseButton(0))
+        if (_weaponInput == null) return;
+
+        if(WeaponReady && _weaponInput.PrimaryFired)
         {
             FireProjectile();
         }
@@ -37,5 +42,10 @@ public class Blaster : MonoBehaviour
     {
         _cooldown = _blasterCooldownTime;
         Instantiate(_projectilePrefab, _blasterMuzzle.position, transform.rotation);
+    }
+
+    internal void Init(IWeaponControls weaponInput)
+    {
+        _weaponInput = weaponInput;
     }
 }

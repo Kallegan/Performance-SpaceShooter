@@ -385,6 +385,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 579732375, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
   m_PrefabInstance: {fileID: 1752201564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &752180910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2200406158456376667, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+  m_PrefabInstance: {fileID: 1752201564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508235375e8f1714089eb3ad6ed76408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &779367476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 779367476, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
@@ -480,6 +491,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132038466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2335647907693161682, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+  m_PrefabInstance: {fileID: 1752201564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508235375e8f1714089eb3ad6ed76408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269596035
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +801,18 @@ PrefabInstance:
       propertyPath: _blasterCooldownTime
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3363977891885651483, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _blasters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363977891885651483, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _blasters.Array.data[0]
+      value: 
+      objectReference: {fileID: 752180910}
+    - target: {fileID: 3363977891885651483, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: _blasters.Array.data[1]
+      value: 
+      objectReference: {fileID: 1132038466}
     - target: {fileID: 6157609519642320790, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -834,6 +868,14 @@ PrefabInstance:
     - target: {fileID: 8495168589385643182, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090760450639333132, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: m_Name
+      value: Blaster-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154075205764614974, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}
+      propertyPath: m_Name
+      value: Blaster-2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdf56f291d0d4914396be7f2175e4f99, type: 3}

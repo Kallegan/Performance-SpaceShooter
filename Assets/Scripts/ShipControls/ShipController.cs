@@ -17,11 +17,14 @@ public class ShipController : MonoBehaviour
     [SerializeField] List<ShipEngine> _engines;
     [SerializeField] AnimateCockpitControls _CockpitControls;
 
+    [SerializeField] List<Blaster> _blasters;
+
 
     Rigidbody _rigidBody;
     float _pitchAmount, _rollAmount, _yawAmount = 0f;
 
-    IMovementControls ControlInput => _movementInput.MovementControls;
+    IMovementControls MovementInput => _movementInput.MovementControls;
+    IWeaponControls WeaponInput => _movementInput.WeaponControls;
 
     private void Awake()
     {
@@ -31,16 +34,19 @@ public class ShipController : MonoBehaviour
     private void Start()
     {
         foreach (ShipEngine engine in _engines)
-            engine.Init(ControlInput, _rigidBody, _thrustForce / _engines.Count);
+            engine.Init(MovementInput, _rigidBody, _thrustForce / _engines.Count);
 
-        _CockpitControls.Init(ControlInput);
+        foreach (Blaster blaster in _blasters)
+            blaster.Init(WeaponInput);
+
+        _CockpitControls.Init(MovementInput);
     } 
 
     private void Update()
     {             
-        _rollAmount = ControlInput.RollAmount;
-        _yawAmount = ControlInput.YawAmount;
-        _pitchAmount = ControlInput.PitchAmount;
+        _rollAmount = MovementInput.RollAmount;
+        _yawAmount = MovementInput.YawAmount;
+        _pitchAmount = MovementInput.PitchAmount;
     }
 
     private void FixedUpdate()
