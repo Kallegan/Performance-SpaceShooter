@@ -59,7 +59,7 @@ public partial class InputSpawnSystem : SystemBase
         shoot = selfDestruct = 0;
         var playerCount = m_PlayerQuery.CalculateEntityCountWithoutFiltering();
 
-        if (Input.GetKey("space"))
+        if (Input.GetMouseButton(0))
         {
             shoot = 1;
         }
@@ -70,7 +70,7 @@ public partial class InputSpawnSystem : SystemBase
 
         //If we have pressed the space bar and there is less than 1 player, create a new player
         //This will be false after we create our first player
-        if (shoot == 1 && playerCount < 1)
+        if (playerCount < 1)
         {
             var entity = EntityManager.Instantiate(m_PlayerPrefab);
             return;
