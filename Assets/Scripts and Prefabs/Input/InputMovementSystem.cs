@@ -51,7 +51,10 @@ public partial class InputMovementSystem : SystemBase
         
         
         mouseX = Input.GetAxis("Mouse X");
+
         mouseY = Input.GetAxis("Mouse Y");
+
+        
 
         Entities
         .WithAll<PlayerTag>()
@@ -84,12 +87,17 @@ public partial class InputMovementSystem : SystemBase
                 float yaw = currentQuaternion.eulerAngles.y;
                 float pitch = currentQuaternion.eulerAngles.x;
 
+              
+              
+
                 //MOVING WITH MOUSE
                 yaw += lookSpeedH * mouseX;
-                pitch -= lookSpeedV * mouseY;
+                pitch -= lookSpeedV * mouseY; 
                 Quaternion newQuaternion = Quaternion.identity;
                 newQuaternion.eulerAngles = new Vector3(pitch, yaw, 0);
                 rotation.Value = newQuaternion;
+
+                
             }
         }).ScheduleParallel();
     }

@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidVelocity: 10
-  asteroidRotation: 2
-  playerForce: 10
-  bulletVelocity: 20
+  asteroidRotation: 10
+  playerForce: 20
+  bulletVelocity: 100
   numAsteroids: 5000
   levelWidth: 500
   levelHeight: 500
