@@ -59,7 +59,7 @@ public partial class InputSpawnSystem : SystemBase
         shoot = selfDestruct = 0;
         var playerCount = m_PlayerQuery.CalculateEntityCountWithoutFiltering();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
         {
             shoot = 1;
         }
