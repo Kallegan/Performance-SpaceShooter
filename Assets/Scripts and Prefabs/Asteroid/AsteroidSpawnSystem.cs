@@ -107,7 +107,7 @@ public partial class AsteroidSpawnSystem : SystemBase
                 //next we normalize it so it has a magnitude of 1
                 randomVel.Normalize();
                 //now we set the magnitude equal to the game settings
-                randomVel = randomVel * settings.asteroidVelocity;
+                randomVel *= settings.asteroidVelocity;
                 //here we create a new VelocityComponent with the velocity data
                 var vel = new PhysicsVelocity { Linear = new float3(randomVel.x, randomVel.y, randomVel.z) };
                     

@@ -11,4 +11,8 @@ public struct GameSettingsComponent : IComponentData
     public int levelWidth;
     public int levelHeight;
     public int levelDepth;
+    public int cameraSensetivityX;
+    public int cameraSensetivityY;
+    public int cameraPitchMin;
+    public int cameraPitchMax;
 }

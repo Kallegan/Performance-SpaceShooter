@@ -226,13 +226,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidVelocity: 10
-  asteroidRotation: 10
+  asteroidRotation: 2
   playerForce: 20
   bulletVelocity: 100
   numAsteroids: 5000
   levelWidth: 500
   levelHeight: 500
   levelDepth: 500
+  cameraSensetivityX: 2
+  cameraSensetivityY: 2
+  cameraPitchClamp: 90
 --- !u!4 &1779587292
 Transform:
   m_ObjectHideFlags: 0

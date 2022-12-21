@@ -31,19 +31,19 @@ public partial class InputMovementSystem : SystemBase
         float mouseY = 0;
 
         //we grab "WASD" for thrusting
-        if (Input.GetKey("d"))
+        if (Input.GetKey(KeyCode.D))
         {
             right = 1;
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey(KeyCode.A))
         {
             left = 1;
         }
-        if (Input.GetKey("w"))
+        if (Input.GetKey(KeyCode.W))
         {
             thrust = 1;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey(KeyCode.S))
         {
             reverseThrust = 1;
         }        
@@ -77,26 +77,26 @@ public partial class InputMovementSystem : SystemBase
                 velocity.Linear += (math.mul(rotation.Value, new float3(0, 0, -1)).xyz) * gameSettings.playerForce * deltaTime;
             }
             if (mouseX != 0 || mouseY != 0)
-            {   //move the mouse
-                //here we have "hardwired" the look speed, we could have included this in the GameSettingsComponent to make it configurable
-                float lookSpeedH = 2f;
-                float lookSpeedV = 2f;
+            {   //move the mouse                
+                float lookSpeedX = gameSettings.cameraSensetivityX;
+                float lookSpeedY = gameSettings.cameraSensetivityY;
 
-                //
+                //Poorly and unclear camera, update if time allows. Had to create custom clamp since it went from 0 to 90 when looking down and 360 to 270 when looking up.               
                 Quaternion currentQuaternion = rotation.Value;
                 float yaw = currentQuaternion.eulerAngles.y;
-                float pitch = currentQuaternion.eulerAngles.x;
+                float pitch = currentQuaternion.eulerAngles.x;    
+                
+                yaw += lookSpeedX * mouseX;
+                pitch -= lookSpeedY * mouseY;
 
-              
-              
+                if (pitch < 270 && pitch >= 89)
+                    pitch = 89;
+                else if (pitch > 270 && pitch <= 281)
+                    pitch = 281;
 
-                //MOVING WITH MOUSE
-                yaw += lookSpeedH * mouseX;
-                pitch -= lookSpeedV * mouseY; 
                 Quaternion newQuaternion = Quaternion.identity;
                 newQuaternion.eulerAngles = new Vector3(pitch, yaw, 0);
-                rotation.Value = newQuaternion;
-
+                rotation.Value = newQuaternion;             
                 
             }
         }).ScheduleParallel();

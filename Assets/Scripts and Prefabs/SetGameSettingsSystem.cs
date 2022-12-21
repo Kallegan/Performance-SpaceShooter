@@ -12,6 +12,10 @@ public class SetGameSettingsSystem : UnityEngine.MonoBehaviour, IConvertGameObje
     public int levelWidth = 2048;
     public int levelHeight = 2048;
     public int levelDepth = 2048;
+    public int cameraSensetivityX = 2;
+    public int cameraSensetivityY = 2;
+    public int cameraPitchMin = 90;
+    public int cameraPitchMax = 270;
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
         var settings = default(GameSettingsComponent);
@@ -24,6 +28,11 @@ public class SetGameSettingsSystem : UnityEngine.MonoBehaviour, IConvertGameObje
         settings.levelWidth = levelWidth;
         settings.levelHeight = levelHeight;
         settings.levelDepth = levelDepth;
+        settings.cameraSensetivityX = cameraSensetivityX;
+        settings.cameraSensetivityY = cameraSensetivityY;
+        settings.cameraPitchMin = cameraPitchMin;
+        settings.cameraPitchMax = cameraPitchMax;
+
         dstManager.AddComponentData(entity, settings);
     }
 }

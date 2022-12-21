@@ -23,7 +23,7 @@ public partial class InputSpawnSystem : SystemBase
 
     //We are going to use this to rate limit bullets per second
     //We could have included this in the game settings, no "ECS reason" not to
-    private float m_PerSecond = 10f;
+    private readonly float m_PerSecond = 10f;
     private float m_NextTime = 0;
 
     protected override void OnCreate()
@@ -63,7 +63,7 @@ public partial class InputSpawnSystem : SystemBase
         {
             shoot = 1;
         }
-        if (Input.GetKey("p"))
+        if (Input.GetKey(KeyCode.P))
         {
             selfDestruct = 1;
         }
