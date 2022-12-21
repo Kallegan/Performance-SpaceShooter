@@ -14,6 +14,7 @@ public partial class InputMovementSystem : SystemBase
         RequireSingletonForUpdate<GameSettingsComponent>();
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     protected override void OnUpdate()
@@ -46,15 +47,10 @@ public partial class InputMovementSystem : SystemBase
         if (Input.GetKey(KeyCode.S))
         {
             reverseThrust = 1;
-        }        
-
-        
+        }                
         
         mouseX = Input.GetAxis("Mouse X");
-
-        mouseY = Input.GetAxis("Mouse Y");
-
-        
+        mouseY = Input.GetAxis("Mouse Y");        
 
         Entities
         .WithAll<PlayerTag>()

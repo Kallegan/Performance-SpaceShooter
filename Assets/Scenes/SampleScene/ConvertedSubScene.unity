@@ -229,7 +229,7 @@ MonoBehaviour:
   asteroidRotation: 2
   playerForce: 20
   bulletVelocity: 100
-  numAsteroids: 5000
+  numAsteroids: 6000
   levelWidth: 500
   levelHeight: 500
   levelDepth: 500
